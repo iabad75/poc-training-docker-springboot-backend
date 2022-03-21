@@ -2,11 +2,24 @@ server:
   port: 8080
   servlet:
     context-path: /api/
-  
 spring:
+  profiles:
+    default: dev
   data:
     mongodb:
       host: localhost
       port: 27017
       database: trainingdb
-      
+---
+server:
+  port: 8080
+  servlet:
+    context-path: /api/
+  
+spring:
+  profiles: docker
+  data:
+    mongodb:
+      host: trainingdb
+      port: 27017
+      database: trainingdb      

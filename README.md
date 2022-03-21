@@ -23,8 +23,20 @@ docker run --name trainingdb -d -p 27017:27017 --network training mongo
 docker build -t poc-docker-springboot-backend .
 ```
 
-**STEP04**: Start loopback backend container service
+**STEP04**: Start springboot backend container service
+
+Start from host the dev profile (active profile)
+```sh
+./mvnw spring-boot:run
+```
+
+Start from host the docker profile
 
 ```sh
-docker run --name poc-docker-springboot-backend -d -p 8080:8080 --network training poc-docker-springboot-backend
+./mvnw spring-boot:run -Dspring-boot.run.profiles=docker
+```
+
+Start container in docker passing the environment variable called SPRING_PROFILES_ACTIVE to activate the correct spring profile
+```sh
+docker run --name poc-docker-springboot-backend -d -e "SPRING_PROFILES_ACTIVE=docker" -p 8080:8080 --network training poc-docker-springboot-backend
 ```
