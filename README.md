@@ -1,6 +1,21 @@
 ## Description
 PoC Training Springboot Mongodb Backend Topics Resources
 
+## Install some dependencies
+To compile the project we must install lonbok. In our case we will use Eclipse UI.
+
+Download lombok-1.18.22.jar configurer
+
+[lombok 1.18.22](https://search.maven.org/remotecontent?filepath=org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar)
+
+Install lombok on Eclipse
+```sh
+jar -jar lombok-1.18.22.jar
+```
+
+Select where install eclipse and click on install
+![Lombok Configuration](captures/lombok.png "Lombok Configuration")
+
 ## Start container services
 
 We create a network with two services: mongodb and loopback backend service
