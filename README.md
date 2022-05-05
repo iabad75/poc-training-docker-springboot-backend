@@ -52,6 +52,7 @@ Start from host the docker profile
 ```
 
 Start container in docker passing the environment variable called SPRING_PROFILES_ACTIVE to activate the correct spring profile
+
 ```sh
-docker run --name poc-docker-springboot-backend -d -e "SPRING_PROFILES_ACTIVE=docker" -p 8080:8080 --network training poc-docker-springboot-backend
+docker run --name poc-docker-springboot-backend -d -e "SPRING_PROFILES_ACTIVE=docker" -p 8088:8088 --network training poc-docker-springboot-backend
 ```

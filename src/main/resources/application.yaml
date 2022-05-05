@@ -3,8 +3,6 @@ server:
   servlet:
     context-path: /api/
 spring:
-  profiles:
-    default: dev 
   data:
     mongodb:
       host: localhost
@@ -17,9 +15,12 @@ server:
     context-path: /api/
   
 spring:
-  profiles: docker
+  config:
+    activate:
+      on-profile:
+      - docker
   data:
     mongodb:
-      host: trainingdb
+      host: mongodb
       port: 27017
       database: trainingdb
