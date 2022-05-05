@@ -10,7 +10,7 @@
 	</parent>
 	
 	<groupId>io.oferto</groupId>
-	<artifactId>poc-training-docker-nodejs-backend</artifactId>
+	<artifactId>poc-training-docker-springboot-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>poc-training-docker-springboot-backend</name>
 	<description>PoC Training Springboot Mongodb Backend Topics Resources</description>

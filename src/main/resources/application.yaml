@@ -1,18 +1,18 @@
 server:
-  port: 8080
+  port: 8088
   servlet:
     context-path: /api/
 spring:
   profiles:
-    default: dev
+    default: dev 
   data:
     mongodb:
       host: localhost
       port: 27017
-      database: trainingdb
+      database: trainingdb        
 ---
 server:
-  port: 8080
+  port: 8088
   servlet:
     context-path: /api/
   
@@ -22,4 +22,4 @@ spring:
     mongodb:
       host: trainingdb
       port: 27017
-      database: trainingdb      
+      database: trainingdb
